@@ -1,0 +1,141 @@
+{
+  "basics": {
+    "name": "Hilal Ahmad Najar",
+    "title": "Programmer Analyst",
+    "summary": "Results-driven ETL Developer with 4.1 years of experience in GCP, leveraging services like BigQuery, Dataflow, Composer / Airflow, Cloud SQL, Cloud Storage, and Pub/Sub. Proven track record in query optimization, resolving production issues, and delivering high-quality results while collaborating effectively with cross-functional teams.",
+    "location": "Pune",
+    "email": "hilalahmad456@gmail.com",
+    "phone": "7780921703",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/hilal-ahmad-32a39211b"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Bitwise Solutions",
+      "role": "Programmer Analyst",
+      "dates": "Apr 2025–Present",
+      "location": "Pune",
+      "bullets": [
+        "Optimized BigQuery performance through partitioning and clustering—reduced query costs by 25%.",
+        "Built automated auditing frameworks in Cloud Composer for real-time data validation—boosted data quality by 40%.",
+        "Collaborated cross-functionally to integrate pipelines, ensuring 99.9% uptime and seamless data delivery."
+      ]
+    },
+    {
+      "company": "Bitwise Solutions",
+      "role": "Programmer",
+      "dates": "Apr 2022–Mar 2025",
+      "location": "Pune",
+      "bullets": [
+        "Designed CDC pipelines with Striim for BigQuery, ingesting 2 TB/day within 5-minute SLAs.",
+        "Enhanced SQL and Dataflow job performance—cut execution times by 35% and compute costs by 20%.",
+        "Automated DAG dependency management in Composer—achieved 95% on-time job accuracy.",
+        "Mentored junior developers on GCP best practices and ETL design patterns."
+      ]
+    },
+    {
+      "company": "Bitwise Solutions",
+      "role": "Trainee Programmer",
+      "dates": "Sep 2021–Mar 2022",
+      "location": "Pune",
+      "bullets": [
+        "Developed batch ETL processes in GCP using Python and Unix shell—handled nightly loads of 500M+ records.",
+        "Scheduled and monitored Dataflow jobs through Composer—ensured 24/7 pipeline reliability.",
+        "Implemented BigQuery transformations with schema evolution and consistency checks."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "item": "Reduced query costs by 25%",
+      "context": "Optimized BigQuery performance through partitioning and clustering",
+      "number": 25,
+      "suffix": "%"
+    },
+    {
+      "item": "Boosted data quality by 40%",
+      "context": "Built automated auditing frameworks in Cloud Composer for real-time data validation",
+      "number": 40,
+      "suffix": "%"
+    },
+    {
+      "item": "Ensured 99.9% uptime",
+      "context": "Collaborated cross-functionally to integrate pipelines and seamless data delivery",
+      "number": 99.9,
+      "suffix": "%"
+    },
+    {
+      "item": "Ingested 2 TB/day within 5-minute SLAs",
+      "context": "Designed CDC pipelines with Striim for BigQuery",
+      "number": 2,
+      "suffix": "TB/day"
+    },
+    {
+      "item": "Cut execution times by 35% and compute costs by 20%",
+      "context": "Enhanced SQL and Dataflow job performance",
+      "number": 35,
+      "suffix": "%"
+    },
+    {
+      "item": "Achieved 95% on-time job accuracy",
+      "context": "Automated DAG dependency management in Composer",
+      "number": 95,
+      "suffix": "%"
+    },
+    {
+      "item": "Handled nightly loads of 500M+ records",
+      "context": "Developed batch ETL processes in GCP using Python and Unix shell",
+      "number": 500,
+      "suffix": "M+"
+    }
+  ],
+  "projects": [],
+  "skills": [
+    {
+      "group": "GCP",
+      "skills": ["BigQuery", "Dataflow", "Composer", "Pub/Sub", "Cloud SQL"]
+    },
+    {
+      "group": "Languages",
+      "skills": ["Python", "Java", "SQL"]
+    },
+    {
+      "group": "Tools",
+      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Masters in Computer Applications (MCA)",
+      "institution": "Jammu University",
+      "dates": "Aug 2017 – Oct 2020",
+      "details": "CGPA: 8.2"
+    },
+    {
+      "degree": "Bachelor in Computer Applications (BCA)",
+      "institution": "Kashmir University (GDC Baramulla)",
+      "dates": "Mar 2014 – Mar 2017",
+      "details": "Percentage: 71.2%"
+    }
+  ],
+  "certifications": [],
+  "awards": [
+    {
+      "title": "Excellence Award",
+      "issuer": "Bitwise Solutions",
+      "date": "December 2022",
+      "description": "For consistent demonstration of technical and collaborative excellence."
+    },
+    {
+      "title": "Shout Out",
+      "issuer": "Bitwise Solutions",
+      "date": "Feb 2025",
+      "description": "For building the Automated Data Quality Validation Utility."
+    }
+  ],
+  "extra": []
+}
