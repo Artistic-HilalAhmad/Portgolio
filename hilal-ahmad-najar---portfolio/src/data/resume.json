@@ -97,15 +97,15 @@
   "skills": [
     {
       "group": "GCP",
-      "skills": ["BigQuery", "Dataflow", "Composer", "Pub/Sub", "Cloud SQL"]
+      "skills": ["BigQuery", "Dataflow", "Composer", "Pub/Sub", "Cloud SQL", "Google Kubernetes Engine"]
     },
     {
       "group": "Languages",
-      "skills": ["Python", "Java", "SQL"]
+      "skills": ["Python", "Java", "SQL", "C", "C++", "PL/SQL"]
     },
     {
       "group": "Tools",
-      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code"]
+      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code", "Docker", "Github", "DBT", "Snowflake", "MYsql"]
     }
   ],
   "education": [
@@ -122,8 +122,21 @@
       "details": "Percentage: 71.2%"
     }
   ],
-  "certifications": [],
+  "certifications": [
+    {
+      "title": "Crash Course on Python"
+    },
+    {
+      "title": "Prompt Engineering for ChatGPT"
+    }
+  ],
   "awards": [
+    {
+      "title": "NTA Net in Computer science",
+      "issuer": "",
+      "date": "",
+      "description": "Qualified National Eligibility Test for Assistant Professor in Computer Science."
+    },
     {
       "title": "Excellence Award",
       "issuer": "Bitwise Solutions",
