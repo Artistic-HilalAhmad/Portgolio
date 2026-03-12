@@ -2,8 +2,8 @@
   "basics": {
     "name": "Hilal Ahmad Najar",
     "title": "Programmer Analyst",
-    "summary": "Results-driven ETL Developer with 4.1 years of experience in GCP, leveraging services like BigQuery, Dataflow, Composer / Airflow, Cloud SQL, Cloud Storage, and Pub/Sub. Proven track record in query optimization, resolving production issues, and delivering high-quality results while collaborating effectively with cross-functional teams.",
-    "location": "Pune",
+    "summary": "Results-driven ETL Developer with 4.7 years of experience in GCP, leveraging services like BigQuery, Dataflow, Composer / Airflow, Cloud SQL, Cloud Storage, and Pub/Sub. Proven track record in query optimization, resolving production issues, and delivering high-quality results while collaborating effectively with cross-functional teams.",
+    "location": "Pune India",
     "email": "hilalahmad456@gmail.com",
     "phone": "7780921703",
     "links": [
@@ -105,7 +105,7 @@
     },
     {
       "group": "Tools",
-      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code", "Docker", "Github", "DBT", "Snowflake", "MYsql"]
+      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code", "Docker", "Github", "DBT", "Snowflake"]
     }
   ],
   "education": [
@@ -134,7 +134,7 @@
     {
       "title": "NTA Net in Computer science",
       "issuer": "",
-      "date": "",
+      "date": "Dec 2020",
       "description": "Qualified National Eligibility Test for Assistant Professor in Computer Science."
     },
     {
