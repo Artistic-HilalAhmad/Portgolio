@@ -22,8 +22,8 @@ export const EducationAndAwards: React.FC = () => {
               className="mb-10"
             >
               <div className="flex items-center gap-3">
-                <GraduationCap className="h-8 w-8 text-blue-400" />
-                <h2 className="text-3xl font-bold text-white">Education</h2>
+                <GraduationCap className="h-8 w-8 text-sky-500" />
+                <h2 className="text-3xl font-light tracking-tight text-slate-900">Education</h2>
               </div>
             </motion.div>
 
@@ -35,13 +35,13 @@ export const EducationAndAwards: React.FC = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative pl-6 before:absolute before:left-0 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-blue-500"
+                  className="relative pl-6 before:absolute before:left-0 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-sky-400"
                 >
-                  <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
-                  <p className="mt-1 text-slate-300">{edu.institution}</p>
-                  <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-slate-400">
-                    <span className="rounded-full bg-white/5 px-3 py-1">{edu.dates}</span>
-                    <span className="font-medium text-blue-400">{edu.details}</span>
+                  <h3 className="text-xl font-medium text-slate-900">{edu.degree}</h3>
+                  <p className="mt-1 text-slate-600">{edu.institution}</p>
+                  <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-slate-500">
+                    <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1">{edu.dates}</span>
+                    <span className="font-medium text-sky-600">{edu.details}</span>
                   </div>
                 </motion.div>
               ))}
@@ -59,8 +59,8 @@ export const EducationAndAwards: React.FC = () => {
                 className="mb-10"
               >
                 <div className="flex items-center gap-3">
-                  <BadgeCheck className="h-8 w-8 text-emerald-400" />
-                  <h2 className="text-3xl font-bold text-white">Certifications</h2>
+                  <BadgeCheck className="h-8 w-8 text-sky-500" />
+                  <h2 className="text-3xl font-light tracking-tight text-slate-900">Certifications</h2>
                 </div>
               </motion.div>
 
@@ -72,14 +72,14 @@ export const EducationAndAwards: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+                    className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-sky-200 hover:shadow-md"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sky-50 text-sky-500">
                       <BadgeCheck className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">{cert.title}</h3>
-                      {cert.issuer && <p className="text-sm text-slate-400">{cert.issuer}</p>}
+                      <h3 className="text-lg font-medium text-slate-900">{cert.title}</h3>
+                      {cert.issuer && <p className="text-sm text-slate-500">{cert.issuer}</p>}
                     </div>
                   </motion.div>
                 ))}
@@ -98,8 +98,8 @@ export const EducationAndAwards: React.FC = () => {
             className="mb-10"
           >
             <div className="flex items-center gap-3">
-              <Award className="h-8 w-8 text-amber-400" />
-              <h2 className="text-3xl font-bold text-white">Honors-Awards</h2>
+              <Award className="h-8 w-8 text-sky-500" />
+              <h2 className="text-3xl font-light tracking-tight text-slate-900">Honors-Awards</h2>
             </div>
           </motion.div>
 
@@ -111,17 +111,17 @@ export const EducationAndAwards: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-sky-200 hover:shadow-md"
               >
-                <h3 className="text-lg font-semibold text-white">{award.title}</h3>
+                <h3 className="text-lg font-medium text-slate-900">{award.title}</h3>
                 {(award.issuer || award.date) && (
-                  <div className="mt-1 flex items-center gap-2 text-sm text-slate-400">
-                    {award.issuer && <span>{award.issuer}</span>}
+                  <div className="mt-2 flex items-center gap-2 text-sm text-slate-500">
+                    {award.issuer && <span className="font-medium">{award.issuer}</span>}
                     {award.issuer && award.date && <span>•</span>}
                     {award.date && <span>{award.date}</span>}
                   </div>
                 )}
-                {award.description && <p className="mt-3 text-slate-300">{award.description}</p>}
+                {award.description && <p className="mt-3 text-slate-600 leading-relaxed">{award.description}</p>}
               </motion.div>
             ))}
           </div>
