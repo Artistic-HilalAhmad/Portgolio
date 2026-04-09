@@ -19,6 +19,7 @@
       "dates": "Apr 2025–Present",
       "location": "Pune",
       "bullets": [
+        "Migrated Tokenization application from Appengine to Kubernetes Engine increasing Performance 50% and optimizing cost and resource utilization"
         "Optimized BigQuery performance through partitioning and clustering—reduced query costs by 25%.",
         "Built automated auditing frameworks in Cloud Composer for real-time data validation—boosted data quality by 40%.",
         "Collaborated cross-functionally to integrate pipelines, ensuring 99.9% uptime and seamless data delivery."
