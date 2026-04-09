@@ -96,15 +96,15 @@
   "skills": [
     {
       "group": "GCP",
-      "skills": ["BigQuery", "Dataflow", "Composer", "Pub/Sub", "Cloud SQL", "Google Kubernetes Engine"]
+      "skills": ["BigQuery", "Dataflow", "Composer", "Pub/Sub", "Cloud SQL", "Google Kubernetes Engine","Compute Engine"]
     },
     {
       "group": "Languages",
-      "skills": ["Python", "Java", "SQL", "C", "C++", "PL/SQL"]
+      "skills": ["Python", "Java", "SQL", "C", "C++", "PL/SQL", "DBT"]
     },
     {
       "group": "Tools",
-      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code", "Docker", "Github", "DBT", "Snowflake"]
+      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code", "Docker", "Github", "Snowflake"]
     }
   ],
   "education": [
