@@ -39,32 +39,39 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 selection:bg-blue-500/30">
+    <div className="min-h-screen bg-white text-slate-900 selection:bg-sky-200">
       <AnimatePresence>
         {showSplash && <Splash onComplete={() => setShowSplash(false)} />}
       </AnimatePresence>
 
       <AnimatedBackground />
 
-      {/* Navigation / Scroll Spy */}
-      <nav className="fixed bottom-6 left-1/2 z-40 -translate-x-1/2 rounded-full border border-white/10 bg-slate-950/80 px-6 py-3 backdrop-blur-md sm:bottom-auto sm:top-6">
-        <ul className="flex items-center gap-6 text-sm font-medium">
-          {['hero', 'experience', 'achievements', 'skills', 'education'].map((section) => (
-            <li key={section}>
-              <a
-                href={`#${section}`}
-                className={`capitalize transition-colors hover:text-white ${
-                  activeSection === section ? 'text-white' : 'text-slate-400'
-                }`}
-              >
-                {section === 'hero' ? 'Home' : section}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {/* Header / Navigation */}
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-sky-100 bg-sky-50/90 px-6 py-4 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between">
+          <div className="text-xl font-medium tracking-tight text-slate-800">
+            {resumeData.basics.name}
+          </div>
+          <nav className="hidden md:block">
+            <ul className="flex items-center gap-8 text-sm font-medium">
+              {['hero', 'experience', 'achievements', 'skills', 'education'].map((section) => (
+                <li key={section}>
+                  <a
+                    href={`#${section}`}
+                    className={`capitalize transition-colors hover:text-sky-600 ${
+                      activeSection === section ? 'text-sky-600' : 'text-slate-500'
+                    }`}
+                  >
+                    {section === 'hero' ? 'Home' : section}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-      <main className="relative z-10">
+      <main className="relative z-10 pt-20">
         <Hero />
         <Experience />
         <Achievements />
@@ -72,16 +79,17 @@ export default function App() {
         <EducationAndAwards />
       </main>
 
-      <footer className="relative z-10 border-t border-white/10 bg-slate-950/50 py-12 backdrop-blur-sm">
+      {/* Trailer / Footer */}
+      <footer className="relative z-10 bg-slate-800 py-12 text-slate-300">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
-          <p className="text-sm text-slate-400">
+          <p className="text-sm">
             © {new Date().getFullYear()} {resumeData.basics.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <a href={resumeData.basics.links[0].url} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+            <a href={resumeData.basics.links[0].url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href={`mailto:${resumeData.basics.email}`} className="text-slate-400 hover:text-white transition-colors">
+            <a href={`mailto:${resumeData.basics.email}`} className="hover:text-white transition-colors">
               <Mail className="h-5 w-5" />
             </a>
           </div>
