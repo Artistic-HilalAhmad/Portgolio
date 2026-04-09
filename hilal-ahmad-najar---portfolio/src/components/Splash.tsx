@@ -24,7 +24,7 @@ export const Splash: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950 text-white"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-sky-50 text-slate-900"
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
@@ -33,17 +33,16 @@ export const Splash: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative flex h-24 w-24 items-center justify-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+          className="relative flex h-24 w-24 items-center justify-center rounded-2xl border border-sky-200 bg-white shadow-lg"
         >
-          <span className="font-mono text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">
+          <span className="font-serif text-4xl font-medium tracking-tight text-sky-800">
             HN
           </span>
-          <div className="absolute inset-0 rounded-2xl border border-white/20 blur-sm"></div>
         </motion.div>
 
-        <div className="w-48 h-1 overflow-hidden rounded-full bg-white/10">
+        <div className="w-48 h-1 overflow-hidden rounded-full bg-sky-200/50">
           <motion.div
-            className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+            className="h-full bg-sky-500"
             style={{ width: `${progress}%` }}
           />
         </div>
