@@ -63,7 +63,6 @@ export const Hero: React.FC = React.memo(() => {
 
         {/* Hero Headline */}
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight theme-text-primary sm:text-6xl lg:text-7xl">
-          Hi, I'm{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-sky-500 to-blue-700 dark:from-sky-300 dark:via-sky-200 dark:to-blue-400">
             {basics.name}
           </span>
