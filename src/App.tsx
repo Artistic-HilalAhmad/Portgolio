@@ -227,10 +227,6 @@ function PortfolioApp() {
             </span>
           </div>
 
-          <p className="text-xs font-mono theme-text-secondary">
-            © {new Date().getFullYear()} Hilal Ahmad Najar. Built with Cloud Precision.
-          </p>
-
           <div className="flex items-center gap-2.5">
             <a 
               href={resumeData.basics.links[0]?.url} 
