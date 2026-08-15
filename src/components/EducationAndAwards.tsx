@@ -19,7 +19,7 @@ export const EducationAndAwards: React.FC = React.memo(() => {
           <GraduationCap className="h-4 w-4" /> Academic & Honors
         </span>
         <h2 className="mt-3 text-3xl font-extrabold tracking-tight theme-text-primary sm:text-5xl">
-          Education, UGC-NET & Awards
+          Education & Awards
         </h2>
         <p className="mx-auto mt-4 max-w-2xl theme-text-secondary text-base sm:text-lg font-normal">
           Academic foundation in Computer Applications, National Eligibility Test qualification, and corporate honors.
