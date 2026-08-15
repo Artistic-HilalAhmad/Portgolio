@@ -1,0 +1,155 @@
+{
+  "basics": {
+    "name": "Hilal Ahmad Najar",
+    "title": "Cloud Data Engineer",
+    "summary": "Results-driven Data Engineer with 5 years of experience building scalable ELT/ETL pipelines across GCP and Snowflake. Proficient in leveraging modern data stack technologies including dbt, Kubernetes, BigQuery, Composer (Airflow), Cloud SQL, and Pub/Sub. Proven track record of architecting robust data models (including Iceberg and CDC tracking), automating multi-environment schemas, and delivering high-impact solutions through effective cross-functional collaboration.",
+    "location": "Pune India",
+    "email": "hilal.najar@bitwiseglobal.com",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/hilal-ahmad-32a39211b"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Bitwise Solutions",
+      "role": "Data Engineer Level 2",
+      "dates": "Apr 2025–Present",
+      "location": "Pune",
+      "bullets": [
+        "Built production dbt + Snowflake (Iceberg) ELT pipeline for merchant underwriting data, implementing 100+ incremental models with CDC-based history tracking, enforced data contracts, and multi-environment schema automation across dev/QA/cert/prod",
+        "Migrated Tokenization application from Appengine to Kubernetes Engine increasing Performance 50% and optimizing cost and resource utilization",
+        "Optimized BigQuery performance through partitioning and clustering—reduced query costs by 25%.",
+        "Built automated auditing frameworks in Cloud Composer for real-time data validation—boosted data quality by 40%.",
+        "Collaborated cross-functionally to integrate pipelines, ensuring 99.9% uptime and seamless data delivery."
+      ]
+    },
+    {
+      "company": "Bitwise Solutions",
+      "role": "Data Engineer Level 1",
+      "dates": "Apr 2022–Mar 2025",
+      "location": "Pune",
+      "bullets": [
+        "Designed CDC pipelines with Striim for BigQuery, ingesting 2 TB/day within 5-minute SLAs.",
+        "Enhanced SQL and Dataflow job performance—cut execution times by 35% and compute costs by 20%.",
+        "Automated DAG dependency management in Composer—achieved 95% on-time job accuracy.",
+        "Mentored junior developers on GCP best practices and ETL design patterns."
+      ]
+    },
+    {
+      "company": "Bitwise Solutions",
+      "role": "Trainee Programmer",
+      "dates": "Sep 2021–Mar 2022",
+      "location": "Pune",
+      "bullets": [
+        "Developed batch ETL processes in GCP using Python and Unix shell—handled nightly loads of 500M+ records.",
+        "Scheduled and monitored Dataflow jobs through Composer—ensured 24/7 pipeline reliability.",
+        "Implemented BigQuery transformations with schema evolution and consistency checks."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "item": "Reduced query costs by 25%",
+      "context": "Optimized BigQuery performance through partitioning and clustering",
+      "number": 25,
+      "suffix": "%"
+    },
+    {
+      "item": "Boosted data quality by 40%",
+      "context": "Built automated auditing frameworks in Cloud Composer for real-time data validation",
+      "number": 40,
+      "suffix": "%"
+    },
+    {
+      "item": "Ensured 99.9% uptime",
+      "context": "Collaborated cross-functionally to integrate pipelines and seamless data delivery",
+      "number": 99.9,
+      "suffix": "%"
+    },
+    {
+      "item": "Ingested 2 TB/day within 5-minute SLAs",
+      "context": "Designed CDC pipelines with Striim for BigQuery",
+      "number": 2,
+      "suffix": "TB/day"
+    },
+    {
+      "item": "Cut execution times by 35% and compute costs by 20%",
+      "context": "Enhanced SQL and Dataflow job performance",
+      "number": 35,
+      "suffix": "%"
+    },
+    {
+      "item": "Achieved 95% on-time job accuracy",
+      "context": "Automated DAG dependency management in Composer",
+      "number": 95,
+      "suffix": "%"
+    },
+    {
+      "item": "Handled nightly loads of 500M+ records",
+      "context": "Developed batch ETL processes in GCP using Python and Unix shell",
+      "number": 500,
+      "suffix": "M+"
+    }
+  ],
+  "projects": [],
+  "skills": [
+    {
+      "group": "GCP And Cloud",
+      "skills": ["BigQuery", "Dataflow", "Composer", "Pub/Sub", "Cloud SQL", "Google Kubernetes Engine", "Compute Engine", "Redis", "Snowflake", "dbt"]
+    },
+    {
+      "group": "Languages",
+      "skills": ["Python", "Java", "SQL", "C", "C++", "PL/SQL", "DBT"]
+    },
+    {
+      "group": "Tools",
+      "skills": ["Apache Airflow", "VSTS", "Jenkins", "Eclipse", "VS Code", "Docker", "Github"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Masters in Computer Applications (MCA)",
+      "institution": "Jammu University",
+      "dates": "Aug 2017 – Oct 2020",
+      "details": "CGPA: 8.2"
+    },
+    {
+      "degree": "Bachelor in Computer Applications (BCA)",
+      "institution": "Kashmir University (GDC Baramulla)",
+      "dates": "Mar 2014 – Mar 2017",
+      "details": "Percentage: 71.2%"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Crash Course on Python"
+    },
+    {
+      "title": "Prompt Engineering for ChatGPT"
+    }
+  ],
+  "awards": [
+    {
+      "title": "NTA Net in Computer science",
+      "issuer": "",
+      "date": "Dec 2020",
+      "description": "Qualified National Eligibility Test for Assistant Professor in Computer Science."
+    },
+    {
+      "title": "Excellence Award",
+      "issuer": "Bitwise Solutions",
+      "date": "December 2022",
+      "description": "For consistent demonstration of technical and collaborative excellence."
+    },
+    {
+      "title": "Shout Out",
+      "issuer": "Bitwise Solutions",
+      "date": "Feb 2025",
+      "description": "For building the Automated Data Quality Validation Utility."
+    }
+  ],
+  "extra": []
+}
