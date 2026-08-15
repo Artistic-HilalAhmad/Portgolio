@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Linkedin, MapPin, Send, Check, Copy, MessageSquare, Sparkles, Phone } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Send, Check, Copy, MessageSquare, ExternalLink } from 'lucide-react';
 import resumeData from '../data/resume.json';
+
+const XIcon: React.FC<{ className?: string }> = ({ className = "h-4 w-4" }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export const ContactSection: React.FC = React.memo(() => {
   const { basics } = resumeData;
@@ -78,26 +84,51 @@ export const ContactSection: React.FC = React.memo(() => {
             </button>
           </div>
 
-          {/* LinkedIn card */}
-          <div className="rounded-3xl border theme-card p-6 shadow-sm backdrop-blur-xl">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="rounded-xl border border-sky-200 dark:border-sky-500/30 bg-sky-50 dark:bg-sky-500/10 p-2.5 text-sky-600 dark:text-sky-400">
-                <Linkedin className="h-5 w-5" />
+          {/* Social Profiles Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* LinkedIn card */}
+            <div className="rounded-3xl border theme-card p-5 sm:p-6 shadow-sm backdrop-blur-xl flex flex-col justify-between">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="rounded-xl border border-sky-200 dark:border-sky-500/30 bg-sky-50 dark:bg-sky-500/10 p-2.5 text-sky-600 dark:text-sky-400">
+                  <Linkedin className="h-5 w-5" />
+                </div>
+                <div>
+                  <span className="text-xs font-mono theme-text-secondary uppercase font-bold">Network</span>
+                  <div className="text-sm font-bold theme-text-primary">LinkedIn</div>
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-mono theme-text-secondary uppercase font-bold">Professional Network</span>
-                <div className="text-sm sm:text-base font-bold theme-text-primary">LinkedIn Profile</div>
-              </div>
+              <a
+                href={basics.links.find(l => l.name === 'LinkedIn')?.url || 'https://linkedin.com'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 flex items-center justify-center gap-2 w-full rounded-xl border theme-card theme-card-hover py-2 text-xs font-mono font-semibold theme-text-primary transition-all"
+              >
+                <Linkedin className="h-3.5 w-3.5 text-sky-600" />
+                <span>Connect</span>
+              </a>
             </div>
-            <a
-              href={basics.links[0]?.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 flex items-center justify-center gap-2 w-full rounded-xl border theme-card theme-card-hover py-2.5 text-xs font-mono font-semibold theme-text-primary transition-all"
-            >
-              <Linkedin className="h-3.5 w-3.5 text-sky-600" />
-              <span>Connect on LinkedIn</span>
-            </a>
+
+            {/* X (Twitter) card */}
+            <div className="rounded-3xl border theme-card p-5 sm:p-6 shadow-sm backdrop-blur-xl flex flex-col justify-between">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 p-2.5 theme-text-primary">
+                  <XIcon className="h-5 w-5" />
+                </div>
+                <div>
+                  <span className="text-xs font-mono theme-text-secondary uppercase font-bold">Updates & Cloud</span>
+                  <div className="text-sm font-bold theme-text-primary">X (Twitter)</div>
+                </div>
+              </div>
+              <a
+                href={basics.links.find(l => l.name === 'X')?.url || 'https://x.com/Thehilalahmad'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 flex items-center justify-center gap-2 w-full rounded-xl border theme-card theme-card-hover py-2 text-xs font-mono font-semibold theme-text-primary transition-all"
+              >
+                <XIcon className="h-3.5 w-3.5" />
+                <span>Follow @Thehilalahmad</span>
+              </a>
+            </div>
           </div>
 
           {/* Location card */}

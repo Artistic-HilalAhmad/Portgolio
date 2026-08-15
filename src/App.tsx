@@ -15,6 +15,12 @@ import { ContactSection } from './components/ContactSection';
 import resumeData from './data/resume.json';
 import { Linkedin, Mail, Menu, X, Download, Cloud, Activity, Sparkles, ArrowUp } from 'lucide-react';
 
+const XIcon: React.FC<{ className?: string }> = ({ className = "h-4 w-4" }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
 function PortfolioApp() {
   const [showSplash, setShowSplash] = useState(true);
   const [activeSection, setActiveSection] = useState('hero');
@@ -229,13 +235,22 @@ function PortfolioApp() {
 
           <div className="flex items-center gap-2.5">
             <a 
-              href={resumeData.basics.links[0]?.url} 
+              href={resumeData.basics.links.find(l => l.name === 'LinkedIn')?.url || 'https://linkedin.com'} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="rounded-xl border theme-card theme-card-hover p-2.5 theme-text-primary transition-all hover:scale-105 shadow-xs"
               title="LinkedIn Profile"
             >
               <Linkedin className="h-4 w-4 text-sky-600" />
+            </a>
+            <a 
+              href={resumeData.basics.links.find(l => l.name === 'X')?.url || 'https://x.com/Thehilalahmad'} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="rounded-xl border theme-card theme-card-hover p-2.5 theme-text-primary transition-all hover:scale-105 shadow-xs"
+              title="X (Twitter) Profile"
+            >
+              <XIcon className="h-4 w-4" />
             </a>
             <a 
               href={`mailto:${resumeData.basics.email}`} 

@@ -16,9 +16,16 @@ import {
   Cloud,
   Cpu,
   Terminal,
-  Activity
+  Activity,
+  Linkedin
 } from 'lucide-react';
 import resumeData from '../data/resume.json';
+
+const XIcon: React.FC<{ className?: string }> = ({ className = "h-4 w-4" }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export const Hero: React.FC = React.memo(() => {
   const { basics } = resumeData;
@@ -83,15 +90,15 @@ export const Hero: React.FC = React.memo(() => {
         </p>
 
         {/* Quick Contact & Info Pills */}
-        <div className="mb-10 flex flex-wrap items-center justify-center gap-3.5 text-xs sm:text-sm font-mono theme-text-primary">
-          <div className="flex items-center gap-2 rounded-xl border theme-card px-4 py-2.5 shadow-sm">
+        <div className="mb-10 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm font-mono theme-text-primary">
+          <div className="flex items-center gap-2 rounded-xl border theme-card px-3.5 py-2 shadow-sm">
             <MapPin className="h-4 w-4 theme-accent" />
             <span>{basics.location}</span>
           </div>
 
           <button
             onClick={handleCopyEmail}
-            className="flex items-center gap-2 rounded-xl border theme-card theme-card-hover px-4 py-2.5 shadow-sm transition-all cursor-pointer group"
+            className="flex items-center gap-2 rounded-xl border theme-card theme-card-hover px-3.5 py-2 shadow-sm transition-all cursor-pointer group"
           >
             <Mail className="h-4 w-4 theme-accent" />
             <span className="font-semibold theme-text-primary">{basics.email}</span>
@@ -104,9 +111,29 @@ export const Hero: React.FC = React.memo(() => {
             )}
           </button>
 
-          <div className="flex items-center gap-2 rounded-xl border theme-card px-4 py-2.5 shadow-sm">
+          <a
+            href={basics.links.find(l => l.name === 'LinkedIn')?.url || 'https://linkedin.com'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-xl border theme-card theme-card-hover px-3.5 py-2 shadow-sm transition-all text-sky-600 dark:text-sky-400 font-semibold cursor-pointer"
+          >
+            <Linkedin className="h-4 w-4" />
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            href={basics.links.find(l => l.name === 'X')?.url || 'https://x.com/Thehilalahmad'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-xl border theme-card theme-card-hover px-3.5 py-2 shadow-sm transition-all font-semibold cursor-pointer"
+          >
+            <XIcon className="h-3.5 w-3.5" />
+            <span>@Thehilalahmad</span>
+          </a>
+
+          <div className="flex items-center gap-2 rounded-xl border theme-card px-3.5 py-2 shadow-sm">
             <Activity className="h-4 w-4 text-emerald-500" />
-            <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">99.9% Pipeline SLA</span>
+            <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">99.9% SLA</span>
           </div>
         </div>
 
