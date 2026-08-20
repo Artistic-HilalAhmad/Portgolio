@@ -30,6 +30,7 @@ import { FaJava, FaDatabase } from 'react-icons/fa6';
 import { DiEclipse } from 'react-icons/di';
 import { TbSql, TbBrandVscode } from 'react-icons/tb';
 import { VscAzureDevops } from 'react-icons/vsc';
+import { SpotlightCard } from './SpotlightCard';
 import resumeData from '../data/resume.json';
 
 // Official dbt Labs Vector Icon
@@ -149,9 +150,9 @@ export const Skills: React.FC = React.memo(() => {
             <button
               key={group}
               onClick={() => setSelectedGroup(group)}
-              className={`rounded-xl px-4 py-2 text-xs sm:text-sm font-mono font-semibold transition-all cursor-pointer ${
+              className={`rounded-2xl px-4 py-2 text-xs sm:text-sm font-mono font-semibold transition-all cursor-pointer ${
                 selectedGroup === group
-                  ? 'bg-sky-500 text-white shadow-md'
+                  ? 'bg-sky-500 text-white shadow-md scale-105'
                   : 'border theme-card theme-card-hover theme-text-secondary'
               }`}
             >
@@ -168,12 +169,12 @@ export const Skills: React.FC = React.memo(() => {
             placeholder={`Search ${totalSkillCount} technologies...`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-xl border theme-card pl-10 pr-4 py-2.5 text-xs sm:text-sm font-mono theme-text-primary placeholder:theme-text-secondary focus:outline-none focus:ring-2 focus:ring-sky-500/40"
+            className="w-full rounded-2xl border theme-card pl-10 pr-4 py-2.5 text-xs sm:text-sm font-mono theme-text-primary placeholder:theme-text-secondary focus:outline-none focus:ring-2 focus:ring-sky-500/40"
           />
         </div>
       </div>
 
-      {/* Skills Group Bento Grid */}
+      {/* Skills Group Bento Grid with Spotlight Effect */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence>
           {filteredSkills.map((groupData) => {
@@ -186,57 +187,58 @@ export const Skills: React.FC = React.memo(() => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="rounded-3xl border theme-card p-6 sm:p-7 shadow-sm transition-all duration-300 backdrop-blur-xl flex flex-col justify-between"
               >
-                <div>
-                  <div className="mb-6 flex items-center justify-between border-b theme-border pb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="rounded-xl border border-sky-200 dark:border-sky-500/30 bg-sky-50 dark:bg-sky-500/10 p-2.5 theme-accent">
-                        <GroupIcon className="h-5 w-5" />
+                <SpotlightCard className="p-6 sm:p-7 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="mb-6 flex items-center justify-between border-b theme-border pb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="rounded-xl border border-sky-200 dark:border-sky-500/30 bg-sky-50 dark:bg-sky-500/10 p-2.5 theme-accent">
+                          <GroupIcon className="h-5 w-5" />
+                        </div>
+                        <h3 className="text-lg font-bold theme-text-primary">{groupData.group}</h3>
                       </div>
-                      <h3 className="text-lg font-bold theme-text-primary">{groupData.group}</h3>
+                      <span className="rounded-full border theme-card px-2.5 py-1 text-xs font-mono font-semibold theme-text-secondary">
+                        {groupData.skills.length} Techs
+                      </span>
                     </div>
-                    <span className="rounded-full border theme-card px-2.5 py-1 text-xs font-mono font-semibold theme-text-secondary">
-                      {groupData.skills.length} Techs
-                    </span>
-                  </div>
 
-                  <div className="flex flex-wrap gap-2.5">
-                    {groupData.skills.map((skill, sIdx) => {
-                      const meta = getSkillMeta(skill);
-                      const IconComponent = meta.icon;
+                    <div className="flex flex-wrap gap-2.5">
+                      {groupData.skills.map((skill, sIdx) => {
+                        const meta = getSkillMeta(skill);
+                        const IconComponent = meta.icon;
 
-                      return (
-                        <motion.div
-                          key={sIdx}
-                          whileHover={{ scale: 1.04, y: -2 }}
-                          className="group inline-flex items-center gap-2.5 rounded-2xl border border-sky-200/90 dark:border-slate-800 bg-white/95 dark:bg-slate-900/80 px-3.5 py-2.5 text-xs sm:text-sm font-mono theme-text-primary shadow-xs transition-all hover:border-sky-400 hover:shadow-md cursor-default"
-                        >
-                          <div 
-                            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-xl p-1.5 transition-transform group-hover:scale-110 shadow-2xs"
-                            style={{ 
-                              backgroundColor: meta.bgTint,
-                              border: `1px solid ${meta.brandColor}33`
-                            }}
+                        return (
+                          <motion.div
+                            key={sIdx}
+                            whileHover={{ scale: 1.04, y: -2 }}
+                            className="group inline-flex items-center gap-2.5 rounded-2xl border border-sky-200/90 dark:border-slate-800 bg-white/95 dark:bg-slate-900/80 px-3.5 py-2 text-xs sm:text-sm font-mono theme-text-primary shadow-xs transition-all hover:border-sky-400 hover:shadow-md cursor-default"
                           >
-                            <IconComponent 
-                              className="h-4 w-4 shrink-0 transition-colors"
-                              style={{ color: meta.brandColor }}
-                            />
-                          </div>
-                          <span className="font-bold theme-text-primary group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors">
-                            {skill}
-                          </span>
-                        </motion.div>
-                      );
-                    })}
+                            <div 
+                              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-xl p-1.5 transition-transform group-hover:scale-110 shadow-2xs"
+                              style={{ 
+                                backgroundColor: meta.bgTint,
+                                border: `1px solid ${meta.brandColor}33`
+                              }}
+                            >
+                              <IconComponent 
+                                className="h-4 w-4 shrink-0 transition-colors"
+                                style={{ color: meta.brandColor }}
+                              />
+                            </div>
+                            <span className="font-bold theme-text-primary group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors">
+                              {skill}
+                            </span>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
 
-                <div className="mt-6 pt-3 border-t border-dashed theme-border flex items-center justify-between text-[11px] font-mono theme-text-secondary">
-                  <span>Verified Production Experience</span>
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                </div>
+                  <div className="mt-6 pt-3 border-t border-dashed theme-border flex items-center justify-between text-[11px] font-mono theme-text-secondary">
+                    <span>Verified Production Experience</span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  </div>
+                </SpotlightCard>
               </motion.div>
             );
           })}
